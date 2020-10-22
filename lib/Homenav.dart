@@ -29,7 +29,6 @@ class _HomenavState extends State<Homenav> {
               ),
             ),
           ),
-
         ],
       ),
     );
