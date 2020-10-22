@@ -3,10 +3,12 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'Navigation_drawer.dart';
+import 'tabbardrawer.dart';
 
 
 void main() => runApp(MaterialApp(
   home: Home(),
+
 ));
 
 class Home extends StatefulWidget {
@@ -32,7 +34,6 @@ class _HomeState extends State<Home> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 SizedBox(
-
                     width: 190,
                   height: 40,// match_parent
                     child: FlatButton(
@@ -45,7 +46,6 @@ class _HomeState extends State<Home> {
                 style: TextStyle(color: Colors.white),
               ),
              ),),
-
             SizedBox(
               width: 190,
               height: 10,
@@ -56,22 +56,14 @@ class _HomeState extends State<Home> {
                   child: FlatButton(
                     color: Colors.blue,
                     onPressed: () {
+                      Navigator.of(context, rootNavigator: true).pushReplacement(MaterialPageRoute(builder: (context) => Welcomedrawer()));
                     },
                     child: Text(
-                      'Stack Navigation',
+                      'Tab bar',
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
                 )
-                // new RaisedButton(
-                //   // padding: EdgeInsets.fromLTRB(0, 20, 40, 0),
-                //
-                //   child: new Text("Stack Navigation"),
-                //   color:  Colors.blueAccent[600],
-                //   onPressed: null,
-                // ),
-
-
               ],
             ),
           ),

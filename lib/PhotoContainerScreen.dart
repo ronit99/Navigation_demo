@@ -11,9 +11,13 @@ void main() => runApp(MaterialApp(
   home: PhotoContainerScreen(),
 ));
 
-class PhotoContainerScreen extends StatelessWidget {
+class PhotoContainerScreen extends StatefulWidget {
 
+  @override
+  _PhotoContainerScreenState createState() => _PhotoContainerScreenState();
+}
 
+class _PhotoContainerScreenState extends State<PhotoContainerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,10 +26,12 @@ class PhotoContainerScreen extends StatelessWidget {
         children: <Widget>[
           Container(
             child: Center(
+
               child: Text(
                 'Account',
                 style: TextStyle(color: Colors.green),
               ),
+
             ),
           ),
 

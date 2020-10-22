@@ -18,7 +18,7 @@ class DrawerItem {
   IconData icon;
   DrawerItem(this.title, this.icon);
 }
-class Navigationdrawer extends StatefulWidget {
+ class Navigationdrawer extends StatefulWidget {
   final drawerItems = [
     new DrawerItem("Home", Icons.home),
     new DrawerItem("Account", Icons.account_circle),
@@ -30,7 +30,6 @@ class Navigationdrawer extends StatefulWidget {
 
 class _NavigationdrawerState extends State<Navigationdrawer> {
   int _selectedDrawerIndex = 0;
-
   _getDrawerItemWidget(int pos) {
     switch (pos) {
       case 0:
@@ -39,7 +38,6 @@ class _NavigationdrawerState extends State<Navigationdrawer> {
         return new PhotoContainerScreen();
       case 2:
         return new VideoContainerscreen();
-
       default:
         return new Text("Error");
     }
@@ -49,7 +47,6 @@ class _NavigationdrawerState extends State<Navigationdrawer> {
     setState(() => _selectedDrawerIndex = index);
     Navigator.of(context).pop(); // close the drawer
   }
-
   @override
   Widget build(BuildContext context) {
     List<Widget> drawerOptions = [];
@@ -95,7 +92,6 @@ class _NavigationdrawerState extends State<Navigationdrawer> {
                     style: TextStyle(color: Colors.black),
                   )),),
             new Column(children: drawerOptions)
-
           ],
         ),
 
